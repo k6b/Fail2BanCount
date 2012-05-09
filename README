@@ -14,7 +14,9 @@ perl version. You'll also want to make sure you copy the bash script instead.
 cp ./bancountmysql /usr/local/bin/
 
 cp ./bancount /usr/local/bin/
+
 --OR
+
 cp ./bancount.sh /usr/local/bin/bancount
 
 -Prep MySQL:
