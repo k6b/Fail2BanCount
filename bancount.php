@@ -21,7 +21,7 @@ echo "<div id='header'>\n";
 
 $db_host = 'localhost';
 $db_user = 'fail2bancount';
-$db_pwd = 'OJ9tzckQyVqCLzut';
+$db_pwd = '';
 $database = 'fail2bancount';
 
 // Page variable
