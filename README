@@ -1,0 +1,8 @@
+
+
+actionban = iptables -I fail2ban-<name> 1 -s <ip> -j DROP
+            /usr/local/bin/bancountmysql ban <ip>
+
+
+actionunban = iptables -D fail2ban-<name> -s <ip> -j DROP
+              /usr/local/bin/bancountmysql unban <ip>

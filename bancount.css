@@ -1,0 +1,80 @@
+/*
+
+Fail2BanCount - by k6b (kyle@kylefberry.net)
+
+*/
+
+body {
+	margin:0; 
+	padding:10px;
+	font-size:80%;
+	font-family: sans-serif;
+	text-align: center;
+	}
+
+#header {
+	display: block;
+	width: 80%;
+	margin: auto;
+	}
+
+#container {
+	width: 80%;
+	margin: auto;
+	display: block;
+	}
+
+#footer {
+	width: 80%;
+	margin: auto;
+	display: block;
+	padding: 10px;
+	}
+
+.table {
+	width: auto;
+	margin: auto;
+	display: table;
+	}
+
+.row  {
+	display: table-row;
+	width: 100%
+	}
+
+.menu {
+	width:200px;
+	padding:1em;
+	display: table-cell;
+	text-align: center;
+	font-weight: bold;
+	}
+
+.cell {
+	width:150px;
+	padding:1em;
+	display: table-cell;
+	text-align: center;
+	}
+
+.cell-header {
+	width:150px;
+	padding:1em;
+	display: table-cell;
+	text-align: center;
+	text-decoration: underline;
+	font-weight: bold;
+	}
+
+h1, h2, h3 {
+	padding: 5px;
+	}
+
+a:link, a:visited, a:active {
+	text-decoration: none;
+	color:#000000;
+	}
+
+a:hover {
+	color:#FF0000;
+	}
