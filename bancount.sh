@@ -1,6 +1,6 @@
 #! /bin/sh
 # script to find the number of IPs banned by fail2ban
-# by k6b kyle@kyleberry.org
+# by k6b kyle@kylefberry.net
 
 # MySQL User/Database information
 
