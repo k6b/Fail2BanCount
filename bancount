@@ -7,7 +7,7 @@ use DBD::mysql;
 use Term::ANSIColor;
 
 my $mysqldb = "fail2bancount";
-my $mysqlpw = "OJ9tzckQyVqCLzut";
+my $mysqlpw = "";
 my $mysqluser = "fail2bancount";
 
 my $db = DBI->connect(
