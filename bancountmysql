@@ -4,9 +4,9 @@ action=$1
 ip=$2
 port=$3
 
-mysqldb=""
+mysqldb="fail2bancount"
 mysqlpw=""
-mysqluser=""
+mysqluser="fail2bancount"
 
 geoip () {
 	geoiplookup $ip | awk -F, '{print $2}' | sed s/\ //
