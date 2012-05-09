@@ -1,4 +1,23 @@
+Fail2BanCount - by k6b - k6b@kylefberry.net
 
+
+INSTALL:
+
+<<INSTALLER TO BE MADE>>
+
+cp ./bancountmysql /usr/local/bin/
+cp ./bancount /usr/local/bin/
+mysql -e "CREATE DATABASE fail2bancount;"
+mysql -e "GRANT SELECT, INSERT ON `fail2bancount`.* TO \
+    'fail2bancount'@'localhost' IDENTIFIED BY PASSWORD '<YOUR PASSWORD HERE>';"
+mysql fail2bancount < fail2bancount.sql
+
+--
+
+Fail2Ban Hax:
+
+Edit the following in /etc/fail2ban/action.d/iptables*.conf, you'll need to do 
+this for each one of the ban "actions" you're using:
 
 actionban = iptables -I fail2ban-<name> 1 -s <ip> -j DROP
             /usr/local/bin/bancountmysql ban <ip>
@@ -6,3 +25,29 @@ actionban = iptables -I fail2ban-<name> 1 -s <ip> -j DROP
 
 actionunban = iptables -D fail2ban-<name> -s <ip> -j DROP
               /usr/local/bin/bancountmysql unban <ip>
+
+There should be something similar if you are using something other than 
+iptables. But don't ask me, learn how to use iptables.
+
+--
+
+Web Page:
+
+First, edit the top of bancount.php and put the password you chose for your 
+MySQL user, don't forget to edit the other settings if you chose something 
+different. Then place bancount.css and bancount.php in a directory that's 
+accessable to your web server. That should be it.
+
+--
+
+Please let me know if you run into any issues, if I've forgotten anything, if 
+I've made any mistakes, or if you think I can do something better. If you hate 
+it, let me know, I'll change it! It's likely I've overlooked things because it 
+works well on my setup and it not quite ment for public consumption yet.
+
+
+Thanks!
+
+k6b
+
+05/2012
